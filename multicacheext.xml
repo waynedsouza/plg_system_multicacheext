@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * @copyright	Copyright (c) 2016 OnlineMarketingConsultants.in. All rights reserved.
+ * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+-->
+<extension type="plugin" version="3.0" group="system" method="upgrade">
+	<name>plg_system_multicacheext</name>
+	<author>Wayne DSouza</author>
+	<creationDate>April 2016</creationDate>
+	<copyright>Copyright (c) 2016 OnlineMarketingConsultants.in. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>wayne.dsouza@onlinemarketingconsultants.in</authorEmail>
+	<authorUrl>Multicache.org</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[
+		<p>a multicache ext plugin</p>
+	]]>
+	</description>
+
+	<files>
+		<filename plugin="multicacheext">multicacheext.php</filename>
+		<filename>index.html</filename>
+	</files>
+
+	<languages>
+		<language tag="en-GB">en-GB.plg_system_multicacheext.ini</language>
+		<language tag="en-GB">en-GB.plg_system_multicacheext.sys.ini</language>
+	</languages>
+
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field	name="browsercache" type="radio"
+				class="btn-group btn-group-yesno"
+				default="0"
+				description="PLG_CACHE_FIELD_BROWSERCACHE_DESC"
+				label="PLG_CACHE_FIELD_BROWSERCACHE_LABEL"
+			>
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="exclude_menu_items" type="menuitem"
+				default=""
+				multiple="multiple"
+				description="PLG_CACHE_FIELD_EXCLUDE_MENU_ITEMS_DESC"
+				label="PLG_CACHE_FIELD_EXCLUDE_MENU_ITEMS_LABEL"
+			/>
+		</fieldset>
+		<fieldset name="advanced">
+			<field name="exclude" type="textarea"
+				class="input-xxlarge"
+				rows="15"
+				filter="raw"
+				default=""
+				description="PLG_CACHE_FIELD_EXCLUDE_DESC"
+				label="PLG_CACHE_FIELD_EXCLUDE_LABEL"
+			/>
+		</fieldset>
+	</fields>
+	</config>
+</extension>
